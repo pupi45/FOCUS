@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOCUS — Mantén el Focus</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ BACKGROUND DECOR ============ -->
+<div class="bg-grid"></div>
+<div class="bg-blob"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <div class="logo" data-route="inicio">
+      <span class="logo-mark">
+        <img src="logo.png" alt="FOCUS" class="logo-img">
+      </span>
+      <span class="logo-text"><span class="logo-f">F</span><span class="logo-rest">OCUS</span></span>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="nav-link active" data-route="inicio">Inicio</button>
+      <button class="nav-link" data-route="coleccion">Colección</button>
+      <button class="nav-link" data-route="historias">Historias</button>
+      <button class="nav-link" data-route="audiovisuales">Audiovisuales</button>
+      <button class="nav-link" data-route="sobre">Sobre FOCUS</button>
+    </nav>
+
+    <div class="header-right">
+      <button class="burger" id="burgerBtn" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile nav drawer -->
+<div class="drawer" id="drawer">
+  <button class="nav-link" data-route="inicio">Inicio</button>
+  <button class="nav-link" data-route="coleccion">Colección</button>
+  <button class="nav-link" data-route="historias">Historias</button>
+  <button class="nav-link" data-route="audiovisuales">Audiovisuales</button>
+  <button class="nav-link" data-route="sobre">Sobre FOCUS</button>
+</div>
+
+<!-- ============ MAIN VIEWS ============ -->
+<main id="viewport" class="viewport">
+
+  <!-- ===================== INICIO ===================== -->
+  <section class="view active" id="view-inicio" data-view="inicio">
+
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot"></span> Educación vial gamificada</p>
+        <h1 class="hero-title">MANTÉN EL<br><span class="accent">FOCUS</span></h1>
+        <p class="hero-sub">Escanea tarjetas, completa tu colección y aprende a prevenir accidentes de tránsito.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="scanBtn">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.8"/><path d="M14 14h3m4 0h0M14 18h3m-3 3h7v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Escanear tarjeta
+          </button>
+          <button class="btn btn-outline" data-route="audiovisuales">
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="1.6"/><path d="M10 8.5v7l6-3.5-6-3.5z" fill="currentColor"/></svg>
+            Ver video
+          </button>
+        </div>
+        <ul class="tip-row">
+          <li>
+            <span class="tip-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            Mantente atento a tu entorno
+          </li>
+          <li>
+            <span class="tip-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 4l16 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            Evita distracciones
+          </li>
+          <li>
+            <span class="tip-icon"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 2l8 3.5V11c0 5.5-3.5 9-8 11-4.5-2-8-5.5-8-11V5.5L12 2z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12l2.3 2.3L16 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Cuida tu vida y la de los demás
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="card-mock">
+          <div class="card-mock-dots"><span></span><span></span><span></span><span></span></div>
+          <span class="card-mock-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="38" height="38"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="#fff"/><circle cx="14" cy="10.5" r="2" fill="var(--green)"/></svg>
+          </span>
+          <span class="card-mock-title"><span class="logo-f">F</span><span class="logo-rest">OCUS</span></span>
+          <span class="card-mock-sub">TARJETA COLECCIONABLE</span>
+        </div>
+        <div class="phone-mock">
+          <div class="phone-notch"></div>
+          <p class="phone-label">ESCANEAR TARJETA</p>
+          <div class="qr-frame">
+            <span class="qr-corner tl"></span><span class="qr-corner tr"></span>
+            <span class="qr-corner bl"></span><span class="qr-corner br"></span>
+            <div class="qr-fake"></div>
+            <span class="qr-scanline"></span>
+          </div>
+          <p class="phone-hint">Acerca la tarjeta al<br>lector para escanear</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TU COLECCIÓN preview -->
+    <section class="panel-row">
+      <div class="panel coleccion-panel">
+        <div class="panel-head">
+          <h2>Tu colección</h2>
+          <span class="badge" id="progressBadgeMini">0/4</span>
+        </div>
+        <div class="mini-cards" id="miniCards"></div>
+        <button class="reward-bar" id="rewardBtnHome">
+          <span class="reward-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="8" width="18" height="13" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 8v13" stroke="currentColor" stroke-width="1.6"/><path d="M12 8c-1.8 0-3-1.2-3-2.5S9.2 3 11 3c1.5 0 1 3 1 5zm0 0c1.8 0 3-1.2 3-2.5S13.8 3 12 3c-1.5 0-1 3-1 5z" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+          <span class="reward-text" id="rewardText">¡Colecciona las 4 tarjetas y desbloquea tu recompensa!</span>
+          <span class="reward-arrow">→</span>
+        </button>
+      </div>
+
+      <div class="panel panel-imagen">
+        <img src="inicio.png" alt="FOCUS" class="inicio-img">
+      </div>
+    </section>
+  </section>
+
+  <!-- ===================== COLECCIÓN ===================== -->
+  <section class="view" id="view-coleccion" data-view="coleccion">
+    <div class="page-head">
+      <p class="eyebrow"><span class="dot"></span> Tu progreso</p>
+      <h1 class="page-title">Tu <span class="accent">Colección</span></h1>
+      <p class="page-sub">Escanea los códigos QR repartidos por el campus para desbloquear cada tarjeta.</p>
+    </div>
+
+    <div class="progress-block">
+      <div class="progress-top">
+        <span id="progressLabel">0 de 4 tarjetas</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <div class="big-cards" id="bigCards"></div>
+
+    <button class="reward-bar reward-bar--full" id="rewardBtnCollection">
+      <span class="reward-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="3" y="8" width="18" height="13" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 8v13" stroke="currentColor" stroke-width="1.6"/></svg>
+      </span>
+      <span class="reward-text" id="rewardTextCollection">¡Colecciona las 4 tarjetas y desbloquea tu recompensa!</span>
+      <span class="reward-arrow">→</span>
+    </button>
+  </section>
+
+  <!-- ===================== HISTORIAS ===================== -->
+  <section class="view" id="view-historias" data-view="historias">
+    <div class="page-head">
+      <p class="eyebrow"><span class="dot"></span> Testimonios reales</p>
+      <h1 class="page-title">Historias <span class="accent">Reales</span></h1>
+      <p class="page-sub">Cada carrera, una historia. Cada historia, una lección de atención.</p>
+    </div>
+
+    <div class="historias-gallery">
+
+      <!-- GASTRONOMÍA — verde — imagen derecha, texto izquierda -->
+      <article class="historia-block historia-block--gastronomia">
+        <div class="historia-text">
+          <span class="historia-tag">Gastronomía</span>
+          <h2>La historia de Mateo</h2>
+          <p>Mateo estudiaba Gastronomía y soñaba con abrir su propio restaurante. Le apasionaba cocinar, crear nuevas recetas y compartir momentos especiales a través de la comida. Una tarde, mientras regresaba a casa después de clases, recibió un mensaje en su celular. Pensó que responderlo le tomaría apenas unos segundos, así que comenzó a escribir mientras cruzaba la calle. Su atención estaba puesta en la pantalla y no en lo que ocurría a su alrededor. No vio el vehículo que se aproximaba ni tuvo tiempo para reaccionar. Aquella distracción terminó con los sueños que tanto esfuerzo le había costado construir.</p>
+          <p>Mateo tenía muchos planes para el futuro, pero ninguno de ellos pudo hacerse realidad.</p>
+          <p class="historia-frase">Un mensaje puede esperar unos minutos; tu vida no. El teléfono puede esperar. Tu vida no.</p>
+        </div>
+        <div class="historia-img">
+          <img src="historias/gastronomia.png" alt="Estudiante de Gastronomía" loading="lazy">
+        </div>
+      </article>
+
+      <!-- DISEÑO GRÁFICO — amarillo — imagen izquierda, texto derecha -->
+      <article class="historia-block historia-block--diseno historia-block--reverse">
+        <div class="historia-text">
+          <span class="historia-tag">Diseño Gráfico</span>
+          <h2>La historia de Carlos</h2>
+          <p>Carlos estudiaba Diseño Gráfico y tenía una gran pasión por la creatividad. Siempre estaba lleno de ideas, proyectos y metas por alcanzar. Soñaba con desarrollar campañas, construir marcas y dejar huella a través de la comunicación visual. Una tarde, al salir de clases, llegó a una vía donde podía utilizar el puente peatonal para cruzar de forma segura. Sin embargo, decidió atravesar la calle directamente porque pensó que le tomaría menos tiempo. Lo que parecía una decisión sin importancia se convirtió en un error irreversible. Sus proyectos, metas y sueños quedaron detenidos en ese instante.</p>
+          <p>Carlos quiso ahorrar unos segundos, pero perdió todos los años que aún tenía por vivir.</p>
+          <p class="historia-frase">Hay atajos que no llevan a ningún destino. Usa el puente peatonal.</p>
+        </div>
+        <div class="historia-img">
+          <img src="historias/diseno.png" alt="Estudiante de Diseño Gráfico" loading="lazy">
+        </div>
+      </article>
+
+      <!-- MECÁNICA — rojo — imagen derecha, texto izquierda -->
+      <article class="historia-block historia-block--mecanica">
+        <div class="historia-text">
+          <span class="historia-tag">Mecánica</span>
+          <h2>La historia de Juan</h2>
+          <p>Juan estudiaba Ingeniería Mecánica y esperaba seguir los pasos de su padre, quien había sido una gran inspiración para él. Tenía planes, proyectos y la ilusión de construir un futuro exitoso gracias a su profesión. Una tarde salió apresurado y decidió cruzar la calle sin utilizar el paso cebra que estaba a pocos metros. Pensó que podía ahorrar tiempo y que nada malo sucedería. Sin embargo, bastó un instante para que todo cambiara. El vehículo apareció antes de que pudiera reaccionar. Aquellos segundos que intentó ganar terminaron costándole todos los años que aún tenía por vivir.</p>
+          <p>Juan quería llegar más rápido, pero nunca llegó a su destino.</p>
+          <p class="historia-frase">Cruzar correctamente toma segundos. Perder la vida toma solo uno.</p>
+        </div>
+        <div class="historia-img">
+          <img src="historias/mecanica.png" alt="Estudiante de Mecánica" loading="lazy">
+        </div>
+      </article>
+
+      <!-- MEDICINA — azul — imagen izquierda, texto derecha -->
+      <article class="historia-block historia-block--medicina historia-block--reverse">
+        <div class="historia-text">
+          <span class="historia-tag">Medicina</span>
+          <h2>La historia de Jimena</h2>
+          <p>Jimena estudiaba Medicina y soñaba con convertirse en una profesional capaz de ayudar a quienes más lo necesitaran. Sus días estaban llenos de clases, prácticas y largas jornadas de estudio. La música era su compañía diaria y siempre caminaba con auriculares. Una mañana se dirigía a la universidad escuchando sus canciones favoritas a un volumen muy alto. Cuando llegó el momento de cruzar la calle, no escuchó la bocina de un vehículo ni las señales de advertencia a su alrededor. En cuestión de segundos ocurrió el accidente. Jimena dedicó años a prepararse para cuidar la vida de otros, pero una distracción le impidió proteger la suya.</p>
+          <p>Jimena soñaba con salvar vidas, pero una decisión cotidiana terminó arrebatándole la propia.</p>
+          <p class="historia-frase">La música puede esperar. Tu vida no.</p>
+        </div>
+        <div class="historia-img">
+          <img src="historias/medicina.png" alt="Estudiante de Medicina" loading="lazy">
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== AUDIOVISUALES ===================== -->
+  <section class="view" id="view-audiovisuales" data-view="audiovisuales">
+    <div class="page-head">
+      <p class="eyebrow"><span class="dot"></span> Contenido audiovisual</p>
+      <h1 class="page-title">Audio<span class="accent">visuales</span></h1>
+      <p class="page-sub">Cortometrajes y cápsulas para entender el costo real de una distracción.</p>
+    </div>
+    <div class="videos-grid videos-grid--reales">
+      <article class="video-real">
+        <video controls preload="metadata" playsinline>
+          <source src="videos/video2.mp4" type="video/mp4">
+          Tu navegador no soporta este video.
+        </video>
+        <div class="video-real-body">
+          <h3>FOCUS — Enfócate y vive</h3>
+          <p>Nuestro mensaje principal: tu atención te conecta con la vida.</p>
+        </div>
+      </article>
+      <article class="video-real">
+        <video controls preload="metadata" playsinline>
+          <source src="videos/video1.mp4" type="video/mp4">
+          Tu navegador no soporta este video.
+        </video>
+        <div class="video-real-body">
+          <h3>Un segundo de distracción</h3>
+          <p>Una historia real sobre lo que puede cambiar en un instante.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE FOCUS ===================== -->
+  <section class="view" id="view-sobre" data-view="sobre">
+    <div class="page-head">
+      <p class="eyebrow"><span class="dot"></span> Nuestra misión</p>
+      <h1 class="page-title">Sobre <span class="accent">FOCUS</span></h1>
+      <p class="page-sub">Tu atención te conecta con la vida.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Quiénes somos</h3>
+        <p>FOCUS es una campaña de comunicación visual creada para concienciar a los estudiantes universitarios
+sobre la importancia de mantener la atención al desplazarse por las vías y prevenir accidentes de tránsito
+causados por distracciones cotidianas, especialmente el uso de dispositivos móviles.
+
+La identidad de la campaña se fundamenta en el concepto de atención y enfoque, representando la
+necesidad de estar conscientes del entorno para tomar decisiones seguras. </p>
+      </div>
+            <div class="about-card">
+        <h3>Misión y visión</h3>
+        <p><strong>Misión:</strong> Promover una cultura de seguridad vial en los jóvenes universitarios mediante estrategias de comunicación visual innovadoras y educativas que fomenten la atención, la responsabilidad y la prevención de accidentes de tránsito causados por la distracción peatonal.</p>
+
+        <p class="parrafo-espacio"><strong>Visión:</strong> Ser una campaña referente en concienciación vial para la comunidad universitaria, reconocida por generar cambios positivos en los hábitos de movilidad y contribuir a la construcción de entornos más seguros y responsables.</p>
+            </div>
+      <div class="about-card">
+        <h3>Nuestro propósito</h3>
+        <p>FOCUS tiene como propósito generar conciencia en los jóvenes universitarios sobre los riesgos que provoca la distracción peatonal, promoviendo hábitos de movilidad más seguros y responsables. A través de estrategias de comunicación visual, contenido interactivo y experiencias educativas, la campaña busca incentivar a los estudiantes a mantener su atención en el entorno vial, reduciendo conductas de riesgo asociadas al uso de dispositivos móviles y otras distracciones.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ SCAN MODAL ============ -->
+<div class="modal-overlay" id="scanModal">
+  <div class="modal scan-modal">
+    <button class="modal-close" id="closeScan">✕</button>
+    <p class="phone-label">ESCANEAR TARJETA</p>
+    <div id="qrReader" class="qr-reader"></div>
+    <p class="phone-hint" id="scanHint">Apunta la cámara al código QR</p>
+  </div>
+</div>
+
+<!-- ============ REVEAL MODAL ============ -->
+<div class="modal-overlay" id="revealModal">
+  <div class="modal reveal-modal">
+    <p class="reveal-kicker" id="revealKicker">¡Tarjeta desbloqueada!</p>
+    <div class="reveal-stage" id="revealStage"></div>
+    <h2 class="reveal-name" id="revealName"></h2>
+    <p class="reveal-desc" id="revealDesc"></p>
+    <button class="btn btn-primary" id="revealClose">Continuar</button>
+  </div>
+</div>
+
+<!-- ============ COMPLETE MODAL ============ -->
+<div class="modal-overlay" id="completeModal">
+  <div class="modal complete-modal">
+    <div class="confetti" id="confetti"></div>
+    <p class="reveal-kicker">¡Colección completa!</p>
+    <h2 class="complete-title">Has dominado el <span class="accent">FOCUS</span></h2>
+    <p class="reveal-desc">Desbloqueaste las 4 tarjetas y tu recompensa especial. Sigue atento, sigue presente.</p>
+    <button class="btn btn-primary" id="completeClose">Genial</button>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-mark">
+        <img src="logo.png" alt="FOCUS" class="logo-img">
+      </span>
+      <span class="logo-text"><span class="logo-f">F</span><span class="logo-rest">OCUS</span></span>
+      <span class="footer-tag">Tu atención te conecta con la vida.</span>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="#fff"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M14 3c.3 2.5 2 4.3 4.5 4.6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="2.5" y="5.5" width="19" height="13" rx="3" stroke="#fff" stroke-width="1.6"/><path d="M10.5 9.5l5 2.5-5 2.5v-5z" fill="#fff"/></svg></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-alert">
+      <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 3l9 16H3l9-16z" stroke="#0a0a0a" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4M12 17h.01" stroke="#0a0a0a" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </span>
+    <span class="footer-msg">Un segundo de distracción puede cambiar tu historia.</span>
+    <span class="footer-cta">MANTÉN EL FOCUS.</span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
